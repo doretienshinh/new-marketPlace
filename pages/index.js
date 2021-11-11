@@ -10,8 +10,10 @@ import {
 
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 import Market from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json'
+// import Painterro from 'painterro'
 
 export default function Home() {
+
   const [nfts, setNfts] = useState([])
   const [loaded, setLoaded] = useState('not-loaded')
   useEffect(() => {
@@ -44,7 +46,7 @@ export default function Home() {
     }))
     console.log('items: ', items)
     setNfts(items)
-    setLoaded('loaded')
+    setLoaded('loaded');
   }
   async function buyNft(nft) {
     const web3Modal = new Web3Modal({
@@ -66,9 +68,13 @@ export default function Home() {
     await transaction.wait()
     loadNFTs()
   }
+  // function showCanvas(){
+  //   // Painterro().show();npm
+  // }
   if (loaded === 'loaded' && !nfts.length) return (<h1 className="p-20 text-4xl">No NFTs!</h1>)
   return (
     <div className="flex justify-center">
+      {/* <button onClick={showCanvas}>show</button> */}
       <div style={{ width: 900 }}>
         <div className="grid grid-cols-2 gap-4 pt-8">
           {

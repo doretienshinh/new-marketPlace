@@ -8,22 +8,31 @@
     "build": "next build && next export -o build",
     "start": "next start",
     "lint": "next lint",
-    "export" : "npm run export -o build",
+    "export": "npm run export -o build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
     "@nomiclabs/hardhat-ethers": "^2.0.2",
     "@nomiclabs/hardhat-waffle": "^2.0.1",
     "@openzeppelin/contracts": "^4.1.0",
     "axios": "^0.21.1",
     "chai": "^4.3.4",
+    "drawing-tool": "^2.1.2",
     "ethereum-waffle": "^3.4.0",
     "ethers": "^5.3.1",
     "ipfs-http-client": "^50.1.2",
     "next": "11.0.0",
+    "painterro": "^1.2.66",
     "react": "17.0.2",
+    "react-canvas-draw": "^1.2.1",
+    "react-color": "^2.19.3",
     "react-dom": "17.0.2",
+    "react-input-slider": "^6.0.1",
+    "react-scripts": "^4.0.3",
+    "simple-drawing-board": "^3.1.2",
     "web3": "^1.6.0",
     "web3modal": "^1.9.3"
   },
@@ -34,5 +43,8 @@
     "hardhat": "^2.6.7",
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.2"
-  }
+  },
+  "eslintIgnore": [
+    "/home/ivan/devforth/painterro/build/painterro2.commonjs.js"
+  ]
 }

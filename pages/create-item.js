@@ -1,10 +1,9 @@
-import { useState } from 'react'
+import { useState, } from 'react'
 import { ethers } from 'ethers'
-import { create as ipfsHttpClient } from 'ipfs-http-client'
 import { useRouter } from 'next/router'
-import Web3Modal from 'web3modal'
 import web3 from 'web3'
-
+import { create as ipfsHttpClient } from 'ipfs-http-client'
+import Web3Modal from 'web3modal'
 const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0')
 
 import {
@@ -13,6 +12,8 @@ import {
 
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 import Market from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json'
+
+import PaintBroad from './PaintBroad'
 
 export default function Home() {
   const [fileUrl, setFileUrl] = useState(null)
@@ -74,7 +75,6 @@ export default function Home() {
       console.log('Error uploading file: ', error);
     }
   }
-
   return (
     <div className="flex justify-center">
       <div className="w-1/2 flex flex-col pb-12">
@@ -107,6 +107,7 @@ export default function Home() {
         <button onClick={createMarket} className="mt-4 bg-blue-500 text-white rounded p-4 shadow-lg">
           Create NFT
         </button>
+        <PaintBroad/>
       </div>
     </div>
   )
