@@ -17,6 +17,11 @@ function MyApp({ Component, pageProps }) {
               Create NFT
             </a>
           </Link>
+          <Link href="/create-iconToken">
+            <a className="mr-4 text-blue-500">
+              Create icon token
+            </a>
+          </Link>
           <Link href="/my-nfts">
             <a className="mr-4 text-blue-500">
               My NFTSs

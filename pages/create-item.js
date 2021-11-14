@@ -13,7 +13,6 @@ import {
 import NFT from '../artifacts/contracts/NFT.sol/NFT.json'
 import Market from '../artifacts/contracts/NFTMarket.sol/NFTMarket.json'
 
-import PaintBroad from './PaintBroad'
 
 export default function Home() {
   const [fileUrl, setFileUrl] = useState(null)
@@ -107,7 +106,6 @@ export default function Home() {
         <button onClick={createMarket} className="mt-4 bg-blue-500 text-white rounded p-4 shadow-lg">
           Create NFT
         </button>
-        <PaintBroad/>
       </div>
     </div>
   )
